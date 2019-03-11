@@ -14,7 +14,7 @@ class App extends Component {
       return (
         <div>
           {this.state.stories1.map ( (items, key) =>(
-          <MyStories onSubmit={this.onSubmit} stories2={items} key={key}/>))}
+          <MyStories stories2={items} key={key}/>))}
         </div>        
     )
   }
