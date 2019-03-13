@@ -2,6 +2,7 @@ import React from "react";
 
 class MyStories extends React.Component {
   state={
+  //stories: this.props.stories,
     clicked: false,
   }
   onSubmit=(e)=>{
@@ -11,18 +12,21 @@ class MyStories extends React.Component {
     })
   }
     
-   render() {          
+   render() {  
+            
     return (
       <form onSubmit={this.onSubmit} > 
       <button>See Details</button> 
+      
       <div>         
         {this.state.clicked ? (
           <div>
-            <li> Author: {this.props.stories2.author}</li>
-            <li> URL: {this.props.stories2.url}</li>
-            <li> Comments: {this.props.stories2.num_comments} </li>
-            <li> Points: {this.props.stories2.points}</li>
-            <li> ID: {this.props.stories2.objectID}</li>
+            <li>Title: {this.props.stories.title}</li>
+            <li> Author: {this.props.stories.author}</li>
+            <li> URL: {this.props.stories.url}</li>
+            <li> Comments: {this.props.stories.num_comments} </li>
+            <li> Points: {this.props.stories.points}</li>
+            <li> ID: {this.props.stories.objectID}</li>
            </div>          
         ):(
           <div />         
